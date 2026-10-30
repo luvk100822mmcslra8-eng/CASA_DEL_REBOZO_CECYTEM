@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h2>Clientes registrados</h2>
+<table>
+  <tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Teléfono</th><th>Fecha</th></tr>
+  {% for c in clientes %}
+  <tr><td>{{ c.id }}</td><td>{{ c.nombre }}</td><td>{{ c.correo }}</td>
+      <td>{{ c.telefono }}</td><td>{{ c.creado }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

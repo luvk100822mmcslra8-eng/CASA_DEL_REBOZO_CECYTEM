@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h2>Catálogo</h2>
+<div class="grid">
+  {% for p in productos %}
+  <div class="card">
+    {% if p.imagen %}<img src="{{ url_for('static', filename='img/' + p.imagen) }}" alt="{{ p.nombre }}">{% endif %}
+    <div>
+      <h3>{{ p.nombre }}</h3>
+      <p>{{ p.descripcion or '' }}</p>
+      <span class="precio">${{ '%.2f'|format(p.precio) }}</span>
+    </div>
+  </div>
+  {% else %}<p>Aún no hay productos.</p>{% endfor %}
+</div>
+{% endblock %}

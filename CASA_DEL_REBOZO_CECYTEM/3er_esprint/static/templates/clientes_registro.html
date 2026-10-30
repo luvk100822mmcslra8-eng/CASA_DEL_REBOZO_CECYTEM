@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h2>Registro de clientes</h2>
+<form method="post" style="max-width:380px">
+  <input name="nombre" placeholder="Nombre completo" value="{{ datos.get('nombre','') }}" required>
+  <input name="correo" type="email" placeholder="Correo" value="{{ datos.get('correo','') }}" required>
+  <input name="telefono" placeholder="Teléfono (10 dígitos)" maxlength="10" value="{{ datos.get('telefono','') }}" required>
+  <button>Registrarme</button>
+</form>
+{% endblock %}

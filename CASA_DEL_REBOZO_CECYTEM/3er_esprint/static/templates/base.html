@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa del Rebozo</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<header>
+  <strong>Casa del Rebozo</strong>
+  <a href="{{ url_for('catalogo.catalogo') }}">Catálogo</a>
+  <a href="{{ url_for('clientes.registro') }}">Registro de clientes</a>
+  {% if session.admin %}
+    <a href="{{ url_for('productos.productos') }}">Productos</a>
+    <a href="{{ url_for('clientes.lista') }}">Clientes</a>
+    <a href="{{ url_for('login.logout') }}">Salir</a>
+  {% else %}
+    <a href="{{ url_for('login.login') }}">Administrador</a>
+  {% endif %}
+</header>
+<main>
+  {% for m in get_flashed_messages() %}<div class="flash">{{ m }}</div>{% endfor %}
+  {% block contenido %}{% endblock %}
+</main></body></html>

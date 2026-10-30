@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa del Rebozo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Casa del Rebozo</h1>
+        <p>Tienda virtual de ropa y artesanías mazahuas</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#inventario">Inventario</a>
+            <a href="#funcionamiento">Funcionamiento</a>
+            <a href="#pruebas">Pruebas</a>
+            <a href="#respaldo">Respaldo</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Panel de administración</h2>
+            <p>Consulta la información general de la tienda.</p>
+
+            <div class="resumen">
+                <div class="dato">
+                    <h3>Productos registrados</h3>
+                    <p id="total-productos">0</p>
+                </div>
+
+                <div class="dato">
+                    <h3>Unidades disponibles</h3>
+                    <p id="total-unidades">0</p>
+                </div>
+
+                <div class="dato">
+                    <h3>Sin existencias</h3>
+                    <p id="sin-existencias">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventario">
+            <h2>Reporte de inventario</h2>
+            <p>Productos registrados en Casa del Rebozo.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabla-inventario"></tbody>
+            </table>
+
+            <button onclick="window.print()">
+                Imprimir reporte
+            </button>
+        </section>
+
+        <section id="funcionamiento">
+            <h2>Reporte de funcionamiento</h2>
+            <p>Resumen de los módulos de la tienda virtual.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Módulo</th>
+                        <th>Función</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Inicio de sesión</td>
+                        <td>Permite el acceso del administrador.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Registro de productos</td>
+                        <td>Permite agregar ropa y artesanías.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Catálogo</td>
+                        <td>Muestra los productos disponibles.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Registro de clientes</td>
+                        <td>Guarda información de los clientes.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Inventario</td>
+                        <td>Consulta precios y cantidades.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Respaldo</td>
+                        <td>Permite descargar una copia de información.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="pruebas">
+            <h2>Pruebas integrales</h2>
+            <p>Lista de comprobación del funcionamiento.</p>
+
+            <label>
+                <input type="checkbox">
+                Los productos aparecen correctamente.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Los precios y cantidades son correctos.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                El reporte se puede imprimir.
+            </label>
+
+            <label>
+                <input type="checkbox">
+                El respaldo se descarga correctamente.
+            </label>
+        </section>
+
+        <section id="respaldo">
+            <h2>Respaldo de información</h2>
+            <p>Descarga una copia de seguridad del inventario.</p>
+
+            <button id="descargar-respaldo">
+                Descargar respaldo
+            </button>
+
+            <p id="mensaje-respaldo"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Casa del Rebozo - Tienda Mazahua</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

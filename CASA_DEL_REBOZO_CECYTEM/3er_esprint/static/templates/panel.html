@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h2>Bienvenido, {{ session.admin }}</h2>
+<p><a href="{{ url_for('productos.productos') }}">Administrar productos</a> ·
+<a href="{{ url_for('clientes.lista') }}">Ver clientes</a></p>
+{% endblock %}

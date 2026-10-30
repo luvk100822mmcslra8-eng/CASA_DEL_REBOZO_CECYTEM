@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block contenido %}
+<h2>Inicio de sesión del administrador</h2>
+<form method="post" style="max-width:340px">
+  <label>Usuario</label><input name="usuario" required>
+  <label>Contraseña</label><input name="password" type="password" required>
+  <button>Entrar</button>
+</form>
+{% endblock %}
